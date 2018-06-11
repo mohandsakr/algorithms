@@ -1,0 +1,28 @@
+//============================================================================
+// Name        : reversenumber.cpp
+// Author      : mohand sakr
+// Version     :
+// Copyright   :  use this code under your responsibllity 
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+
+#include <iostream>
+using namespace std;
+ int reversenum(int n){
+ int result=0;
+ while(n>0){
+ 	int a=n%10; // get the last digit of the number 
+ 	n=n/10; // delete the last digit
+ 	result*=10; //multiply the current number by 10 to add the new digit to  it in the new order
+ 	result+=a;
+ 	//<<result<<endl;
+ }
+ return result;
+ 	
+ }
+int main() {
+	
+	cout<<reversenum(2259)<<endl;
+ 	return 0;
+}
